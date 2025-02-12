@@ -5,8 +5,7 @@
 </template>
 
 <script setup>
-import ChartBar from '../components/ChartBar.vue';
-
+import ChartBar from "../components/UI/ChartHome.vue"
 const labels = [
   "Январь",
   "Февраль",

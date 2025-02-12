@@ -14,12 +14,13 @@ button{
     height: 35px;
     width: auto;
     outline: none;
-    border: 3px solid #E2E2E2;
-    padding: 10px 55px;
-    border-radius: 5px;
+    border: 3px solid #1E1E27;
+    padding: 20px 25px;
+    font-size: 24px;
+    border-radius: 85px;
     cursor: pointer;
-    background: #28242A;
-    color: #fff;
+    background: transparent;
+    color: #FFF6F3;
     display: flex;
     align-items: center;
 }
