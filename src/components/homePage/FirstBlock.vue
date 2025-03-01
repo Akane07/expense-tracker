@@ -89,7 +89,9 @@ const interval = setInterval(() => {
 
 <style scoped>
 .wrapper{
-    padding: 186px 51px;
+    padding-top: 186px;
+    padding-left: 51px;
+    padding-right: 51px;
 }
 .block-first{
     width: 100%;
@@ -266,7 +268,10 @@ const interval = setInterval(() => {
     justify-content: center;
     height: 105px;
     color: #ffffff;
+    box-shadow: 0px 0px 32.5px 0px #00000040;
+
 }
+
 .line-second::after {
     content: "";
     height: 100%;

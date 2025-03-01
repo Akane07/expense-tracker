@@ -70,6 +70,7 @@ const selectLang = () => {
     width: 100%;
     display: flex;
     justify-content: end;
+    z-index: 0;
     
     }
   .right-line{
@@ -93,6 +94,7 @@ const selectLang = () => {
     justify-content: end;
     align-items: center;
     padding-right: 19px;
+    z-index: 1;
     /* background: linear-gradient(89.99deg, rgba(24, 29, 49, 0) 5.39%, rgba(24, 29, 49, 0.68) 99.99%); */
   }
   </style>
