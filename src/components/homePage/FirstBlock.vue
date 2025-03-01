@@ -78,17 +78,12 @@ const randomBlocksLast = ref({
     ran6Last: (Math.floor(Math.random()*300)),
 })
 const interval = setInterval(() => {
-    const last = ref()
     for(let key in randomBlocks.value) {
         randomBlocksLast.value[key+'Last'] = randomBlocks.value[key];
-        console.log(randomBlocksLast.value[key+'Last'])
-        last.value = randomBlocks.value[key];
         randomBlocks.value[key] = Math.floor(Math.random()*320 + 20);
-        
-        
     }
     
-}, 4000)
+}, 4100)
 </script>
 
 
@@ -386,8 +381,7 @@ const interval = setInterval(() => {
 }
 .collum-1{
     width: 76px;
-    --col1he: 110px;
-    --col1heLast: 100px;
+
     background: #B5182D;
     position: relative;
     bottom: 99px;
