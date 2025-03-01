@@ -39,16 +39,56 @@
         </span>
     </div>
     <div class="third-right">
-
+        <div class="bottom-line">
+            <div class="chart">
+                <div class="collum-1" :style="{'--col1he': randomBlocks.ran  + 'px', '--col1heLast': randomBlocksLast.ranLast  + 'px'}"></div>
+                <div class="collum-2":style="{'--col2he': randomBlocks.ran2  + 'px', '--col2heLast': randomBlocksLast.ran2Last  + 'px'}"></div>
+                <div class="collum-3" :style="{'--col3he': randomBlocks.ran3  + 'px', '--col3heLast': randomBlocksLast.ran3Last  + 'px'}"></div>
+                <div class="collum-4" :style="{'--col4he': randomBlocks.ran4  + 'px', '--col4heLast': randomBlocksLast.ran4Last  + 'px'}"></div>
+                <div class="collum-5" :style="{'--col5he': randomBlocks.ran5  + 'px', '--col5heLast': randomBlocksLast.ran5Last  + 'px'}"></div>
+                <div class="collum-6" :style="{'--col6he': randomBlocks.ran6  + 'px', '--col6heLast': randomBlocksLast.ran6Last  + 'px'}"></div>
+            </div>
+        </div>
+        <div class="rigth-line"></div>
     </div>
 </div>
 </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { computed, ref, onUnmounted, onMounted } from 'vue';
 import Header from '../UI/Header.vue';
 
+
+
+const randomBlocks = ref({
+    ran: (Math.floor(Math.random()*300)),
+    ran2: (Math.floor(Math.random()*300)),
+    ran3: (Math.floor(Math.random()*300)),
+    ran4: (Math.floor(Math.random()*300)),
+    ran5: (Math.floor(Math.random()*300)),
+    ran6: (Math.floor(Math.random()*300))
+})
+const randomBlocksLast = ref({
+    ranLast: (Math.floor(Math.random()*300)),
+    ran2Last: (Math.floor(Math.random()*300)),
+    ran3Last: (Math.floor(Math.random()*300)),
+    ran4Last: (Math.floor(Math.random()*300)),
+    ran5Last: (Math.floor(Math.random()*300)),
+    ran6Last: (Math.floor(Math.random()*300)),
+})
+const interval = setInterval(() => {
+    const last = ref()
+    for(let key in randomBlocks.value) {
+        randomBlocksLast.value[key+'Last'] = randomBlocks.value[key];
+        console.log(randomBlocksLast.value[key+'Last'])
+        last.value = randomBlocks.value[key];
+        randomBlocks.value[key] = Math.floor(Math.random()*320 + 20);
+        
+        
+    }
+    
+}, 4000)
 </script>
 
 
@@ -305,5 +345,165 @@ import Header from '../UI/Header.vue';
     background: #1E1E27;
     border-radius: 85px;
     box-shadow: 0px 0px 32.5px 0px #00000040;
+    padding: 63px;
+    position: relative;
+}
+.bottom-line {
+    width: calc(100% - 126px);
+    height: 16px;
+    background: #28242A;
+    position: absolute;
+    bottom: 85px;
+}
+.rigth-line{
+    width: 16px;
+    height: calc(100% - 126px);
+    position: absolute;
+    right: 79px;
+    /* bottom: 85px; */
+    background: #28242A;
+    /* transform: rotate(90deg); */
+}
+.chart{
+    height: auto;
+    width: 95.5%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: -3px;
+    padding-right: 7px;
+    padding-left: 7px;
+}
+@keyframes anim1 {
+    from {
+        height: var(--col1heLast);
+        bottom: calc(var(--col1heLast) - 1px);
+    }
+    to {
+        height: var(--col1he);
+        bottom: calc(var(--col1he) - 1px);
+    }
+}
+.collum-1{
+    width: 76px;
+    --col1he: 110px;
+    --col1heLast: 100px;
+    background: #B5182D;
+    position: relative;
+    bottom: 99px;
+    animation-name: anim1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes anim2 {
+    from {
+        height: var(--col2heLast);
+        bottom: calc(var(--col2heLast) - 1px);
+    }
+    to {
+        height: var(--col2he);
+        bottom: calc(var(--col2he) - 1px);
+    }
+}
+.collum-2{
+    width: 76px;
+    --col2he: 110px;
+    --col2heLast: 100px;
+    background: #B5182D;
+    position: relative;
+    bottom: 99px;
+    animation-name: anim2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes anim3 {
+    from {
+        height: var(--col3heLast);
+        bottom: calc(var(--col3heLast) - 1px);
+    }
+    to {
+        height: var(--col3he);
+        bottom: calc(var(--col3he) - 1px);
+    }
+}
+.collum-3{
+    width: 76px;
+    --col3he: 110px;
+    --col3heLast: 100px;
+    background: #B5182D;
+    position: relative;
+    bottom: 99px;
+    animation-name: anim3;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes anim4 {
+    from {
+        height: var(--col4heLast);
+        bottom: calc(var(--col4heLast) - 1px);
+    }
+    to {
+        height: var(--col4he);
+        bottom: calc(var(--col4he) - 1px);
+    }
+}
+.collum-4{
+    width: 76px;
+    --col4he: 110px;
+    --col4heLast: 100px;
+    background: #B5182D;
+    position: relative;
+    bottom: 99px;
+    animation-name: anim4;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes anim5 {
+    from {
+        height: var(--col5heLast);
+        bottom: calc(var(--col5heLast) - 1px);
+    }
+    to {
+        height: var(--col5he);
+        bottom: calc(var(--col5he) - 1px);
+    }
+}
+.collum-5{
+    width: 76px;
+    --col5he: 110px;
+    --col5heLast: 100px;
+    background: #B5182D;
+    position: relative;
+    bottom: 99px;
+    animation-name: anim5;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes anim6 {
+    from {
+        height: var(--col6heLast);
+        bottom: calc(var(--col6heLast) - 1px);
+    }
+    to {
+        height: var(--col6he);
+        bottom: calc(var(--col6he) - 1px);
+    }
+}
+.collum-6{
+    width: 76px;
+    --col6he: 110px;
+    --col6heLast: 100px;
+    background: #B5182D;
+    position: relative;
+    bottom: 99px;
+    animation-name: anim6;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 </style>
