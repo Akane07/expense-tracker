@@ -1,7 +1,7 @@
 <template>
 <div class="wrapper">
     <div class="content">
-        <div class="text">Почему выберают<br> нас?</div>
+        <div class="text">Почему выбирают<br> нас?</div>
         <div class="left">
             <div class="interface">
                 <div class="interface-content">
