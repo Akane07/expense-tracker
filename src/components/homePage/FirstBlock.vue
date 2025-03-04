@@ -83,7 +83,7 @@ const interval = setInterval(() => {
         randomBlocks.value[key] = Math.floor(Math.random()*320 + 20);
     }
     
-}, 4100)
+}, 4000)
 </script>
 
 

@@ -50,7 +50,7 @@
 <style scoped>
 .wrapper{
     padding-top: 92px;
-    padding-bottom: 108px;
+    /* padding-bottom: 108px; */
     padding-left: 51px;
     padding-right: 51px;
     top: -241px;

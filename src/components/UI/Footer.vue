@@ -12,6 +12,7 @@
             <a href="https://youtu.be/dQw4w9WgXcQ?si=LtgklwImhYQF1o0j" class="iconA"><img src="../../assets/youtube.svg" alt="" class="yt"></a>
             <a href="https://youtu.be/dQw4w9WgXcQ?si=LtgklwImhYQF1o0j" class="iconA"><img src="../../assets/telegram.svg" alt="" class="tg"></a>
             <a href="https://youtu.be/dQw4w9WgXcQ?si=LtgklwImhYQF1o0j" class="iconA"><img src="../../assets/github.svg" alt="" class="gh"></a>
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=LtgklwImhYQF1o0j" class="iconA"><img src="../../assets/vue.svg" alt="" class="gh"></a>
         </div>
     </div>
 </template>
