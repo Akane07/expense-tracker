@@ -1,6 +1,9 @@
 <template>
-    <div>
+    <div v-if="chartType === 'Line'">
         <Line :data="chartData" :options="chartOptions"/>
+    </div>
+    <div v-else-if="chartType === 'Pie'">
+      <Pie :data="chartData" :options="chartOptions"/>
     </div>
 </template>
 
