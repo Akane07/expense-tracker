@@ -386,7 +386,7 @@ const interval = setInterval(() => {
 }
 .collum-1{
     width: 76px;
-
+    filter: drop-shadow(0 0 0 transparent);
     background: #B5182D;
     position: relative;
     bottom: 99px;
@@ -407,6 +407,7 @@ const interval = setInterval(() => {
 }
 .collum-2{
     width: 76px;
+    filter: drop-shadow(0 0 0 transparent);
     --col2he: 110px;
     --col2heLast: 100px;
     background: #B5182D;
@@ -431,6 +432,7 @@ const interval = setInterval(() => {
     width: 76px;
     --col3he: 110px;
     --col3heLast: 100px;
+    filter: drop-shadow(0 0 0 transparent);
     background: #B5182D;
     position: relative;
     bottom: 99px;
@@ -453,6 +455,7 @@ const interval = setInterval(() => {
     width: 76px;
     --col4he: 110px;
     --col4heLast: 100px;
+    filter: drop-shadow(0 0 0 transparent);
     background: #B5182D;
     position: relative;
     bottom: 99px;
@@ -473,6 +476,7 @@ const interval = setInterval(() => {
 }
 .collum-5{
     width: 76px;
+    filter: drop-shadow(0 0 0 transparent);
     --col5he: 110px;
     --col5heLast: 100px;
     background: #B5182D;
@@ -496,6 +500,7 @@ const interval = setInterval(() => {
 .collum-6{
     width: 76px;
     --col6he: 110px;
+    filter: drop-shadow(0 0 0 transparent);
     --col6heLast: 100px;
     background: #B5182D;
     position: relative;

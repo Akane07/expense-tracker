@@ -24,4 +24,16 @@ button{
     display: flex;
     align-items: center;
 }
+button:hover{
+    transform: perspective(500px) translateZ(15px) scale(1.05);
+    animation: glow-pulse 1.5s ease-in-out infinite;
+}
+@keyframes glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 3px rgba(181, 24, 45, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(181, 24, 45, 0.8));
+  }
+}
 </style>

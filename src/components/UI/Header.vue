@@ -6,7 +6,9 @@
           <Button>Вход</Button>
         </div>
       <div class="header-container">
-        <img src="../../assets/Logo.svg" alt="Логотип" class="logo">
+        <div class="logo-wrapper">
+          <img src="../../assets/Logo.svg" alt="Логотип" class="logo">
+        </div>
         <div class="left-line-container">
             <div class="left-line"></div>
         </div>
@@ -56,13 +58,35 @@ const selectLang = () => {
     /* padding: 0 20px; */
   }
   
-  .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 8%;
-    width: 75px;
+  .logo-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 8%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.logo {
+  width: 75px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: drop-shadow(0 0 0 transparent);
+}
+
+.logo-wrapper:hover .logo {
+  transform: perspective(500px) translateZ(15px) scale(1.05);
+  animation: glow-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 3px rgba(181, 24, 45, 0.4));
   }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(181, 24, 45, 0.8));
+  }
+}
+
   .left-line-container{
     width: 100%;
   }

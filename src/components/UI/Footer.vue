@@ -5,14 +5,16 @@
             EXPENSE TRACKER
         </div>
         <div class="foot-line">
-            <img src="../../assets/Logo.svg" alt="Logo" class="logo">
+            <div class="logo-wrapper">
+                <img src="../../assets/Logo.svg" alt="Логотип" class="logo">
+            </div>
         </div>
 
         <div class="icons">
             <a href="https://youtu.be/dQw4w9WgXcQ?si=LtgklwImhYQF1o0j" class="iconA"><img src="../../assets/youtube.svg" alt="" class="yt"></a>
             <a href="https://youtu.be/dQw4w9WgXcQ?si=LtgklwImhYQF1o0j" class="iconA"><img src="../../assets/telegram.svg" alt="" class="tg"></a>
             <a href="https://youtu.be/dQw4w9WgXcQ?si=LtgklwImhYQF1o0j" class="iconA"><img src="../../assets/github.svg" alt="" class="gh"></a>
-            <a href="https://youtu.be/dQw4w9WgXcQ?si=LtgklwImhYQF1o0j" class="iconA"><img src="../../assets/vue.svg" alt="" class="gh"></a>
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=LtgklwImhYQF1o0j" class="iconA"><img src="../../assets/vue.svg" alt="" class="vue"></a>
         </div>
     </div>
 </template>
@@ -41,6 +43,10 @@
     font-size: 20px;
     cursor: default;
 }
+.author:hover{
+    transform: perspective(500px) translateZ(15px) scale(1.05);
+    animation: glow-pulse 1.5s ease-in-out infinite;
+}
 .foot-line{
     background: linear-gradient(90deg, rgba(181, 24, 45, 0) 0%, #B5182D 50.2%, rgba(181, 24, 45, 0) 100%);
     height: 64px;
@@ -52,9 +58,32 @@
     align-items: center;
     justify-content: center;
 }
-.logo{
-    width: 75px;
-    z-index: 1;
+.logo-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.logo {
+  width: 75px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: drop-shadow(0 0 0 transparent);
+}
+
+.logo-wrapper:hover .logo {
+  transform: perspective(500px) translateZ(15px) scale(1.05);
+  animation: glow-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 3px rgba(181, 24, 45, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(181, 24, 45, 0.8));
+  }
 }
 .icons{
     display: flex;
@@ -68,15 +97,36 @@
     cursor: pointer;
     z-index: 1;
 }
+.yt:hover{
+    transform: perspective(500px) translateZ(15px) scale(1.05);
+    animation: glow-pulse 1.5s ease-in-out infinite;
+}
 .tg{
     width: 50.5px;
     height: 46.5px;
     cursor: pointer;
 }
+.tg:hover{
+    transform: perspective(500px) translateZ(15px) scale(1.05);
+    animation: glow-pulse 1.5s ease-in-out infinite;
+}
 .gh{
     width: 49px;
     height: 43.5px;
     cursor: pointer;
+}
+.gh:hover{
+    transform: perspective(500px) translateZ(15px) scale(1.05);
+    animation: glow-pulse 1.5s ease-in-out infinite;
+}
+.vue{
+    width: 49px;
+    height: 43.5px;
+    cursor: pointer;
+}
+.vue:hover{
+    transform: perspective(500px) translateZ(15px) scale(1.05);
+    animation: glow-pulse 1.5s ease-in-out infinite;
 }
 .iconA{
     z-index: 1;
